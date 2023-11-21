@@ -150,6 +150,11 @@
 }
 
 @media (max-width: 991px) {
+    .icons-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
