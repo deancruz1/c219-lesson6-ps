@@ -133,6 +133,16 @@
     text-decoration: none;
 }
 
+.card {
+    transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 1200px) {
     .img-content>.img-fluid {
         max-width: 80%;
