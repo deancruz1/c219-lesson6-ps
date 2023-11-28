@@ -218,6 +218,15 @@
     gap: 1rem;
 }
 
+.offcanvas {
+    background-color: #c9c9c9;
+}
+
+.course-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width: 1200px) {
     .img-content>.img-fluid {
         max-width: 80%;
