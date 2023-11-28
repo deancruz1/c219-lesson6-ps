@@ -17,14 +17,16 @@
 
 .icon-container {
     width: 30px;
-    /* Adjust the size of the circle */
     height: 30px;
-    /* Adjust the size of the circle */
-    border-radius: 50%;
-    border: 1px solid black;
+    border-radius: 100%;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.icon-container:has(img) {
+    border: none;
 }
 
 .text-content {
@@ -108,7 +110,8 @@
 }
 
 .custom-aspect-ratio {
-    aspect-ratio: 1.3; /* Set a 1:1 aspect ratio; adjust as needed */
+    aspect-ratio: 1.3;
+    /* Set a 1:1 aspect ratio; adjust as needed */
     object-fit: cover;
 }
 
@@ -125,7 +128,8 @@
 
 .card-space {
     flex: 0 0 auto;
-    width: 100%; /* Take full width on smaller screens */
+    width: 100%;
+    /* Take full width on smaller screens */
     max-width: 22%;
 }
 
@@ -133,14 +137,85 @@
     text-decoration: none;
 }
 
-.card {
-    transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out;
+.avatar {
+    object-fit: cover;
+    object-position: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: 2px solid lightgreen;
     cursor: pointer;
 }
 
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.offline {
+    border: 2px solid gray;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.mt-noti {
+    margin-top: 2.5rem !important;
+}
+
+.notifications-container {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 25%;
+    min-width: 400px;
+    background: rgb(236, 236, 236);
+    border-radius: 5px;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.read {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.msg-status {
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.notifications {
+    cursor: pointer;
+}
+
+.message-box {
+    opacity: 0.5;
+}
+
+.bookmark-icon {
+    color: black;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.card-body {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offcanvas-bottom {
+    height: 65vh;
+}
+
+.offcanvas-body {
+    gap: 1rem;
 }
 
 @media (max-width: 1200px) {
@@ -150,6 +225,25 @@
 }
 
 @media (max-width: 991px) {
+    .header-course {
+        text-align: center;
+    }
+
+    .message-box {
+        opacity: 1;
+    }
+
+    .mt-noti {
+        margin-top: 2.5rem !important;
+    }
+
+    .notifications-container {
+        right: auto;
+        left: 0;
+        width: 100%;
+        min-width: 320px;
+    }
+
     .icons-container {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -216,6 +310,7 @@
 /* Media query for larger screens (desktop) */
 @media (min-width: 992px) {
     .card-container .card {
-        flex: 0 0 22%; /* Set width to 22% */
+        flex: 0 0 22%;
+        /* Set width to 22% */
     }
 }
